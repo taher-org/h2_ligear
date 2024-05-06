@@ -1,0 +1,241 @@
+# This is a VSS example overlay that is to be used when generating vss_dbc.json in this repository
+# The content shall just be seen as examples that can be used for prototyping.
+# It does not in any way represent an official mapping.
+#
+# How to regenerate vss_dbc.json:
+#
+# 1. Decide which VSS version to use
+#
+# Two good places to check:
+# * See what versions KUKSA.val supports: https://github.com/eclipse/kuksa.val/tree/master/data/vss-core
+# * See what VSS releases that exists: https://github.com/COVESA/vehicle_signal_specification/releases
+#
+# (You can also also clone the VSS-repo and use whatever version you like)
+#
+# 2. Download Yaml file for selected verison.
+#
+# As of today part of a *.tar.gz file in https://github.com/COVESA/vehicle_signal_specification/releases
+#
+# 3. Regenerate the json file
+#
+# vss-tools/vspec2json.py -e dbc -o dbc_overlay.vspec --json-pretty --no-uuid vss_rel_3.1.1.yaml vss_dbc.json
+#
+# (For this you must typically have cloned https://github.com/COVESA/vss-tools)
+
+#
+#
+# Type and datatype required, others will be inherited
+#
+#
+#
+#
+#
+
+Vehicle.OBD.OilTemperature:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: EngineOilTemperature
+    min: -40
+    max: 215
+
+
+Vehicle.Exterior.AirTemperature:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: ExternalTemperature
+    min: -85
+    max: 170
+
+Vehicle.Acceleration.Lateral:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: LatAcceleration_BSM
+    min: -40.96
+    max: 40.92
+
+
+Vehicle.Acceleration.Longitudinal:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: LongAcceleration_BSM
+    min: -40.96
+    max: 40.92
+
+
+
+Vehicle.ADAS.CruiseControl.IsActive:
+  type: actuator
+  datatype: boolean
+  dbc2vss:
+    signal: CruiseControlSts
+    transform:
+       mapping:
+        - from: Not_inserted
+          to: 0
+        - from: Inserted 
+          to: 1
+  vss2dbc:
+    signal: CruiseControlSts
+    transform:
+       mapping:
+        - from: 0
+          to: Not_inserted
+        - from: 1
+          to: Inserted
+
+
+Vehicle.ADAS.ABS.IsEnabled:
+  type: actuator
+  datatype: boolean
+  dbc2vss:
+    signal: ABSActive
+    transform:
+       mapping:
+        - from: 0
+          to: Not_active
+        - from: 1
+          to: Active
+  vss2dbc:
+    signal: ABSActive
+    transform:
+       mapping:
+        - from: Not_active
+          to: 0
+        - from: Active
+          to: 1
+
+
+Vehicle.ADAS.EBD.IsEnabled:
+  type: actuator
+  datatype: boolean
+  dbc2vss:
+    signal: EBDActive
+    transform:
+       mapping:
+        - from: 0
+          to: Not_active
+        - from: 1
+          to: Active
+  vss2dbc:
+    signal: EBDActive
+    transform:
+       mapping:
+        - from: Not_active
+          to: 0
+        - from: Active
+          to: 1
+
+
+Vehicle.ADAS.EBD.IsError:
+  type: sensor
+  datatype: boolean
+  dbc2vss:
+    signal: EBDFault 
+
+
+Vehicle.ADAS.ABS.IsError:
+  type: sensor
+  datatype: boolean
+  dbc2vss:
+    signal: ABSFault
+
+
+Vehicle.Chassis.ParkingBrake.IsEngaged:
+  type: actuator
+  datatype: boolean
+  dbc2vss:
+    signal: ParkBrakeSts
+    transform:
+       mapping:
+        - from: 0
+          to: OFF
+        - from: 1
+          to: ON
+  vss2dbc:
+    signal: ParkBrakeSts
+    transform:
+       mapping:
+        - from: OFF
+          to: 0
+        - from: ON
+          to: 1
+
+
+
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Speed:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: WheelSpeedFR
+
+
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Speed:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: WheelSpeedFL
+
+
+
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Speed:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: WheelSpeedRR
+
+
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Speed:
+  type: sensor
+  datatype: float
+  dbc2vss:
+    signal: WheelSpeedRL
+
+
+Vehicle.Chassis.Brake.PedalPosition:
+  type: sensor
+  datatype: int8
+  dbc2vss:
+    signal: BrakePedalPosition
+
+
+Vehicle.Powertrain.TractionBattery.MaxVoltage:
+  type: actuator
+  datatype: int8
+  dbc2vss:
+    signal: VoltageMax
+    min: 10.6
+    max: 16.975
+
+Vehicle.Powertrain.CombustionEngine.Torque:
+  type: sensor
+  datatype: int16
+  dbc2vss:
+    signal: EngineTorque
+    min: -500
+    max: 1546
+
+
+
+Vehicle.Body.Windshield.Front.Wiping.System.IsWiping:
+  type: sensor
+  datatype: boolean
+  dbc2vss:
+    signal: FrontWiperMoveSts
+    transform:
+       mapping:
+        - from: 0
+          to: stop
+        - from: 1
+          to: moving
+
+
+
+
+
+
+
+
