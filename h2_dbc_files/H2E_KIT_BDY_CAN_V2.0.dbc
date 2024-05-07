@@ -1,0 +1,367 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TPMS SteeringWheel DDU10 PBX190 PowerSteering CKM12
+VAL_TABLE_ Mode 3 "Fault" 2 "Flashing" 1 "on" 0 "off" ;
+VAL_TABLE_ WiperSpeed 3 "HighSpeed" 2 "normal" 1 "intermittend" 0 "off" ;
+VAL_TABLE_ Indicator_Color_Table 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ ShiftLeverPosition : 0|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ lapnumber : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ lap : 0|16@1+ (10,0) [0|655350] "" Vector__XXX
+ SG_ AC_Speed : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NeuesSignal_201 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NeuesSignal_200 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NeuesSignal_179 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NeuesSignal_178 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NeuesSignal_177 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 561 PBX_TX6: 5 PBX190
+ SG_ RHR_spin : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LHR_spin : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RHF_spin : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LHF_spin : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FastPulseCounterRR : 24|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ FastPulseCounterRL : 16|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ FastPulseCounterFR : 8|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ FastPulseCounterFL : 0|8@1+ (1,0) [0|255] ""  DDU10
+
+BO_ 587 DDU_TX_WheelSpdCorr: 7 DDU10
+ SG_ WheelSpeedRR_Corr : 32|13@0+ (0.0625,0) [0|511.9375] "Km/h" Vector__XXX
+ SG_ WheelSpeedRL_Corr : 29|13@0+ (0.0625,0) [0|511.9375] "Km/h" Vector__XXX
+ SG_ WheelSpeedFR_Corr : 10|13@0+ (0.0625,0) [0|511.9375] "Km/h" Vector__XXX
+ SG_ WheelSpeedFL_Corr : 7|13@0+ (0.0625,0) [0|511.9375] "Km/h" Vector__XXX
+
+BO_ 553 PBX_TX5: 8 PBX190
+ SG_ TankPresH1 : 0|16@1+ (0.002,0) [0|131.07] ""  DDU10
+
+BO_ 552 PBX_TX4: 8 PBX190
+ SG_ Injector_Timer : 24|20@1+ (1,0) [0|1048575] "s" Vector__XXX
+ SG_ WaterPump_current : 44|12@1+ (0.01,0) [0|40.95] ""  DDU10
+ SG_ EngineOnTime : 0|24@1+ (1,0) [0|16777215] "s" Vector__XXX
+
+BO_ 576 DDU_TX_Menu: 8 Vector__XXX
+ SG_ EngineTorquePBX : 32|11@1+ (1,-500) [-500|1547] "Nm" Vector__XXX
+ SG_ WaterInjectionPump_Current : 24|8@1+ (0.1,0) [0|25.5] "A" Vector__XXX
+ SG_ CrankCasePressure : 8|16@1+ (0.001,0) [0|65.535] "bar" Vector__XXX
+ SG_ PmpDemandIntercooler : 0|8@1+ (0.392,0) [0|99.96] "" Vector__XXX
+
+BO_ 465 TYREREAR: 8 TPMS
+ SG_ ttyrerr : 48|8@1+ (1,-40) [-40|215] "°C"  SteeringWheel
+ SG_ ttyrerl : 16|8@1+ (1,-40) [-40|215] "°C"  SteeringWheel
+ SG_ ptyrerr : 56|8@1+ (13.7,0) [0|3493.5] "mbar"  SteeringWheel
+ SG_ ptyrerl : 24|8@1+ (13.7,0) [0|3493.5] "mbar"  SteeringWheel
+
+BO_ 464 TYREFRONT: 8 TPMS
+ SG_ ttyrefr : 48|8@1+ (1,-40) [-40|215] "°C" Vector__XXX
+ SG_ ttyrefl : 16|8@1+ (1,-40) [-40|215] "°C" Vector__XXX
+ SG_ ptyrefr : 56|8@1+ (13.7,0) [0|3493.5] "mbar" Vector__XXX
+ SG_ ptyrefl : 24|8@1+ (13.7,0) [0|3493.5] "mbar"  SteeringWheel
+
+BO_ 549 PBX_TX3: 8 Vector__XXX
+ SG_ Odometer : 24|32@1+ (1,0) [0|4294967295] "m" Vector__XXX
+ SG_ IgnitionCounter : 15|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ CmdIgnSts_Sim : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 560 DDU_TX1: 8 DDU10
+ SG_ WaterPmpOnReq : 57|1@1+ (1,0) [0|1] ""  PBX190
+ SG_ EngOffReq : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EngOnReq : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ResetRailCounter : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Test : 37|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ActualGear : 10|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Eng_Revolutions : 40|14@1+ (1,0) [0|16383] "rpm" Vector__XXX
+ SG_ Veh_Speed : 24|13@1+ (0.05625,0) [0|460.74375] "km/h" Vector__XXX
+ SG_ ECUFanRequest : 9|1@1+ (1,0) [0|1] ""  PBX190
+ SG_ BrakePressure : 14|10@1+ (0.25,0) [0|255.75] "bar"  PBX190
+ SG_ BrakeLight : 8|1@1+ (1,0) [0|1] ""  PBX190
+ SG_ AmbientTemperature : 0|8@1+ (0.5,-40) [-40|87.5] "°C"  PBX190
+
+BO_ 432 DDU_TX_Brake: 8 DDU10
+ SG_ fuellevel : 55|16@0- (1,0) [-32768|32767] "cL"  SteeringWheel
+ SG_ consollap : 39|16@0- (1,0) [-32768|32767] "cL"  SteeringWheel
+ SG_ bpr : 23|16@0- (1,0) [-32768|32767] "bar"  SteeringWheel
+ SG_ bpf : 7|16@0- (1,0) [-32768|32767] "bar"  SteeringWheel
+
+BO_ 424 DDU_TX_Race: 8 DDU10
+ SG_ shiftlights : 7|16@0+ (1,0) [0|65535] ""  SteeringWheel
+
+BO_ 392 DDU_TX_Gear: 4 PBX190
+ SG_ gear : 23|16@0+ (1,0) [0|65535] ""  SteeringWheel
+ SG_ fuelused : 7|16@0- (1,0) [-32768|32767] "cL"  SteeringWheel
+
+BO_ 368 DDU_TX_Engine: 8 DDU10
+ SG_ speed : 55|16@0+ (1,0) [0|65535] "km/h"  SteeringWheel
+ SG_ enginestatus : 39|16@0+ (1,0) [0|65535] ""  SteeringWheel
+ SG_ map : 23|16@0- (1,0) [-32768|32767] "mbar"  PBX190,SteeringWheel
+ SG_ rpm : 7|16@0- (1,0) [-32768|32767] ""  SteeringWheel
+
+BO_ 360 DDU_TX_Barrel: 8 DDU10
+ SG_ vbarrel : 23|16@0- (1,0) [-32768|32767] "mV"  SteeringWheel
+
+BO_ 312 DDU_TX_Veh: 8 DDU10
+ SG_ vbatt : 39|16@0- (1,0) [-32768|32767] "mV"  SteeringWheel
+ SG_ pcomp : 23|16@0- (1,0) [-32768|32767] "mbar"  SteeringWheel
+ SG_ steer : 7|16@0- (1,0) [-32768|32767] "°"  SteeringWheel
+
+BO_ 296 DDU_TX_Pressure: 8 DDU10
+ SG_ tc : 55|16@0+ (1,0) [0|65535] ""  SteeringWheel
+ SG_ pbaro : 39|16@0- (1,0) [-32768|32767] "mbar"  SteeringWheel
+ SG_ pfuel : 23|16@0- (1,0) [-32768|32767] "mbar"  SteeringWheel
+ SG_ poil : 7|16@0- (1,0) [-32768|32767] "mbar"  SteeringWheel
+
+BO_ 272 DDU_TX_Temp: 8 DDU10
+ SG_ gbt : 55|16@0- (1,0) [-32768|32767] "°C"  SteeringWheel
+ SG_ toil : 39|16@0- (1,0) [-32768|32767] "°C"  SteeringWheel
+ SG_ twater : 23|16@0- (1,0) [-32768|32767] "°C"  SteeringWheel
+ SG_ tair : 7|16@0- (1,0) [-32768|32767] "°C"  SteeringWheel
+
+BO_ 264 DDU_TX_Angles: 8 DDU10
+ SG_ tps : 7|16@0- (1,0) [-32768|32767] "%"  SteeringWheel
+ SG_ pps : 39|16@0- (1,0) [-32768|32767] "%"  SteeringWheel
+
+BO_ 1675 SteeringWheel_TX2: 8 SteeringWheel
+ SG_ PotABS : 55|16@0+ (1,0) [0|65535] ""  PBX190,DDU10
+ SG_ PotTCS : 39|16@0+ (1,0) [0|65535] ""  PBX190,DDU10
+ SG_ DataAnalogPotABS : 23|16@0+ (1,0) [0|65535] "mV"  PBX190,DDU10
+ SG_ DataAnalogPotTCS : 7|16@0+ (1,0) [0|65535] "mV"  PBX190,DDU10
+
+BO_ 1674 SteeringWheel_TX1: 8 SteeringWheel
+ SG_ Ok : 47|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ turnlight_R : 63|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ klaxon : 55|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ page : 39|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ turnlight_L : 31|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ wiper : 23|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ paddledown : 7|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ paddleup : 15|1@0+ (1,0) [0|1] ""  PBX190,DDU10
+
+BO_ 144 DDU_TX_H2: 8 DDU10
+ SG_ HSCU_SysState : 24|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ ManinfoldPresH1 : 8|16@1+ (0.002,0) [0|131.07] "MPa" Vector__XXX
+ SG_ TankValveStatExtd_3 : 5|1@0+ (1,0) [0|1] ""  PBX190
+ SG_ TankValveStatExtd_2 : 6|1@0+ (1,0) [0|1] ""  PBX190
+ SG_ TankValveStatExtd_1 : 7|1@0+ (1,0) [0|1] ""  PBX190
+
+BO_ 586 DDU_TX_WheelSpd: 8 DDU10
+ SG_ speedrr : 55|16@0+ (0.015625,0) [0|1023.984375] "m/s" Vector__XXX
+ SG_ speedrl : 39|16@0+ (0.015625,0) [0|1023.984375] "m/s" Vector__XXX
+ SG_ speedfr : 23|16@0+ (0.015625,0) [0|1023.984375] "m/s" Vector__XXX
+ SG_ speedfl : 7|16@0+ (0.015625,0) [0|1023.984375] "m/s"  PBX190,SteeringWheel
+
+BO_ 544 PBX_TX2: 8 PBX190
+ SG_ AC_Request : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_Switch : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ H2EmptyRequest : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BatteryVoltage : 48|12@1+ (0.01,0) [0|40.95] "V"  DDU10
+ SG_ IndicatorRightMode : 46|2@1+ (1,0) [0|3] ""  DDU10
+ SG_ IndicatorLeftMode : 44|2@1+ (1,0) [0|3] ""  DDU10
+ SG_ Lights2Mode : 42|2@1+ (1,0) [0|3] ""  DDU10
+ SG_ Lights1Mode : 40|2@1+ (1,0) [0|3] ""  DDU10
+ SG_ WaterPump_Intercooler2_PWM : 24|8@1+ (1,0) [0|255] "%"  DDU10
+ SG_ WaterPump_Intercooler_PWM : 16|8@1+ (1,0) [0|255] "%"  DDU10
+ SG_ Additonal_Fan_PWM : 32|8@1+ (1,0) [0|255] "%"  DDU10
+ SG_ CabinBlower_Fan_PWM : 8|8@1+ (1,0) [0|255] "%"  DDU10
+ SG_ WiperSpeed : 0|4@1+ (1,0) [0|15] ""  DDU10
+ SG_ TankFlap_Status : 4|1@1+ (1,0) [0|1] ""  DDU10
+
+BO_ 512 PBX_TX1: 8 PBX190
+ SG_ AC_Fan : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RailCounter : 36|20@1+ (1,0) [0|1048575] "s" Vector__XXX
+ SG_ EngineCoolantFan2 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MeasurementEquipment : 34|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Reserve7 : 32|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ EngineECU_Supply : 33|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ WindshieldHeater_Supply : 31|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ ABS_Motor : 30|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ ABS_Valve : 29|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ ABS_KL15 : 28|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ EngineCoolantFan1 : 27|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ FuelingECU : 26|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ HSCU_Supply : 25|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ PiezoBox : 24|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ TPMS : 23|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ AC_Kanbox : 22|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ AC_Comp_Valve : 21|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ AC_Condenser : 20|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ EngineECU_KL15 : 19|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ BrakeLights : 18|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Additonal_Fan : 17|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ WaterPump_Intercooler : 15|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ WaterPump_Intercooler2 : 16|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ CabinBlower_Fan : 14|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ WaterPump_Injection : 13|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Horn : 12|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ IndicatorsRight : 11|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ IndicatorsLeft : 10|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Lights2 : 9|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Lights1 : 8|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Wiper_Supply : 7|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ PowerSteering_ECU_Supply : 6|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Ediff_Supply : 5|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ TCU_Diff_Supply : 4|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ Steering_Wheel_Supply : 3|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ PermBat_ECU_Supply : 2|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ DDU_Keypad_Supply : 1|1@1+ (1,0) [0|1] ""  DDU10
+ SG_ PBXOnline : 0|1@1+ (1,0) [0|1] ""  DDU10
+
+BO_ 662 SteeringCAN_3: 8 DDU10
+ SG_ SteeringMapReq_PS : 0|8@1+ (1,0) [0|255] ""  PowerSteering
+
+BO_ 658 SteeringCAN_2: 8 PowerSteering
+ SG_ LimitFlags_PS : 56|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ StatusFlags_PS : 48|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ Digital_IO_Values : 40|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ ActiveErrorCode_PS : 32|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ SelectedMap_PS : 24|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ SteeringAngle10Bit_PS : 15|10@0+ (1,0) [0|1023] ""  DDU10
+ SG_ SteeringAngle8Bit_PS : 0|8@1+ (1,0) [0|255] ""  DDU10
+
+BO_ 656 SteeringCAN_1: 8 PowerSteering
+ SG_ TorqueB_RAW_PS : 56|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ TorqueA_RAW_PS : 48|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ BoxTemperature_PS : 40|8@1+ (1,0) [0|255] "°C"  DDU10
+ SG_ SwitchPostion_PS : 32|8@1+ (1,0) [0|255] ""  DDU10
+ SG_ TorqueBits_PS : 0|8@1+ (1,0) [0|255] "Ohne"  DDU10
+ SG_ SupplyVoltage_PS : 24|8@1+ (0.1,0) [0|25.5] "V"  DDU10
+ SG_ Current_A_PS : 16|8@1+ (1,0) [0|255] "A"  DDU10
+ SG_ MotorDuty_PS : 8|8@1+ (1,0) [0|255] "%"  DDU10
+
+BO_ 2147485696 CKM_TX: 8 CKM12
+ SG_ DigIN_8 : 25|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_7 : 24|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_9 : 26|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_6 : 21|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_5 : 20|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_4 : 19|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_3 : 18|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_2 : 17|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ DigIN_1 : 16|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_12 : 11|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_11 : 10|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_10 : 9|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_09 : 8|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_08 : 7|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_07 : 6|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_06 : 5|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_05 : 4|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_04 : 3|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_03 : 2|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_02 : 1|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+ SG_ Button_01 : 0|1@1+ (1,0) [0|1] ""  PBX190,DDU10
+
+BO_ 2147485697 CKM_RX: 8 PBX190
+ SG_ Indicator_01 : 0|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_02 : 4|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_03 : 8|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_04 : 12|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_05 : 16|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_06 : 20|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_07 : 24|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_08 : 28|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_09 : 32|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_10 : 36|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_11 : 40|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Indicator_12 : 44|4@1+ (1,0) [0|0] ""  CKM12
+ SG_ Brightness : 48|4@1+ (1,0) [0|0] ""  CKM12
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 465 ptyrerr "tyrePressue_RearRight";
+CM_ SG_ 465 ptyrerl "tyrePressue_RearLeft";
+CM_ SG_ 464 ptyrefr "tyrePressue_FrontRight";
+CM_ SG_ 464 ptyrefl "TyrePressue_FrontLeft";
+CM_ SG_ 432 fuellevel "Not applicable for H2 - to be used with %H2?";
+CM_ SG_ 432 consollap "?";
+CM_ SG_ 432 bpr "Brake Pressure Rear";
+CM_ SG_ 432 bpf "Brake Pressure Front";
+CM_ SG_ 424 shiftlights "0 Led 1-2
+
+1 Led 3-4
+
+2 Led 5-6
+
+3 Led 7-8
+
+We will check if functionality is available
+";
+CM_ SG_ 392 fuelused "Not Needed";
+CM_ SG_ 368 speed "Vehicle Speed";
+CM_ SG_ 368 enginestatus "0 Pit Limiter - Not used
+1 Crank sensor default - ?
+2 Full Course Yellow -?
+3 HP2_ON -?
+4 Fuel Low
+5 Rain -?
+6 High Beam 2 - is there a high beam or just the normal swichable Lights?";
+CM_ SG_ 368 map "IntakeairPressure";
+CM_ SG_ 368 rpm "Engine Revolutions";
+CM_ SG_ 360 vbarrel "?";
+CM_ SG_ 312 vbatt "BatteryVoltage";
+CM_ SG_ 312 pcomp "?";
+CM_ SG_ 312 steer "Steering Wheel Angle";
+CM_ SG_ 296 tc "?";
+CM_ SG_ 296 pbaro "AmbientAirPressure";
+CM_ SG_ 296 pfuel "FuelPressure - Not applicable for H2";
+CM_ SG_ 296 poil "Oil Pressure";
+CM_ SG_ 272 gbt "Gearbox Temp";
+CM_ SG_ 272 toil "Oil Temperature";
+CM_ SG_ 272 twater "Engine Water temp";
+CM_ SG_ 272 tair "Ambient Air Temp";
+CM_ SG_ 264 pps "PedalPosition";
+CM_ SG_ 1674 Ok "TurnLight_RH";
+CM_ SG_ 1674 turnlight_R "DashPage";
+CM_ SG_ 1674 page "TurnLightLH";
+VAL_ 544 IndicatorRightMode 3 "Fault" 2 "Flashing" 1 "on" 0 "off" ;
+VAL_ 544 IndicatorLeftMode 3 "Fault" 2 "Flashing" 1 "on" 0 "off" ;
+VAL_ 544 Lights2Mode 3 "Fault" 2 "Flashing" 1 "on" 0 "off" ;
+VAL_ 544 Lights1Mode 3 "Fault" 2 "Flashing" 1 "on" 0 "off" ;
+VAL_ 544 WiperSpeed 3 "HighSpeed" 2 "normal" 1 "intermittend" 0 "off" ;
+VAL_ 2147485697 Indicator_01 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_02 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_03 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_04 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_05 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_06 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_07 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_08 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_09 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_10 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_11 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+VAL_ 2147485697 Indicator_12 15 "Dim White" 14 "Dim Violet" 13 "Dim Blue" 12 "Dim Cyan" 11 "Dim Green" 10 "Dim Yellow" 9 "Dim Red" 8 "White" 7 "Violet" 6 "Blue" 5 "Cyan" 4 "Green" 3 "Yellow" 2 "Orange" 1 "Red" 0 "Black" ;
+

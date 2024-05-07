@@ -1,0 +1,293 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HSCU DDU ECU
+VAL_TABLE_ SIV_Valve 1 "SIVValve_Closed" 0 "SIVValve_Open" ;
+VAL_TABLE_ VCU_FuelingCommand 1 "Fueling required" 0 "no Fueling required" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ TankPresH1 : 0|16@1+ (0.002,0) [0|131.07] "MPa" Vector__XXX
+
+BO_ 646 EngineECUStat2: 8 ECU
+ SG_ H2RailTemperature15_2 : 8|8@1+ (0.75,-48) [-48|143.25] "°C"  DDU
+ SG_ H2RailTemperature15_1 : 0|8@1+ (0.75,-48) [-48|143.25] "°C"  DDU
+ SG_ H2RailTemperature150_2 : 24|8@1+ (0.75,-48) [-48|143.25] "°C"  DDU
+ SG_ H2RailTemperature150_1 : 16|8@1+ (0.75,-48) [-48|143.25] "°C"  DDU
+
+BO_ 630 EngineECUStat: 8 ECU
+ SG_ H2RailPressure150_2 : 50|14@1+ (0.002,0) [0|32.766] "MPa" Vector__XXX
+ SG_ H2RailPressure150_1 : 36|14@1+ (0.002,0) [0|32.766] "MPa" Vector__XXX
+ SG_ H2RailPressure15_2 : 24|12@1+ (0.002,0) [0|8.19] "MPa" Vector__XXX
+ SG_ H2RailPressure15_1 : 12|12@1+ (0.002,0) [0|8.19] "MPa" Vector__XXX
+ SG_ SIV150Vlv1_State : 2|1@1+ (1,0) [0|1] ""  DDU
+ SG_ WaterLevel : 4|8@1+ (0.5,0) [0|127] "%"  DDU
+ SG_ SIV15Vlv2_State : 1|1@1+ (1,0) [0|1] ""  DDU
+ SG_ SIV15Vlv1_State : 0|1@1+ (1,0) [0|1] ""  DDU
+
+BO_ 913 HSCU_H2Meas_02: 8 HSCU
+ SG_ Hydrogen_Detector_HS06 : 8|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  DDU
+ SG_ Hydrogen_Detector_HS05 : 0|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  ECU,DDU
+
+BO_ 881 HSCU_PMeas_02: 8 HSCU
+ SG_ RegulatedPresL2 : 16|16@1+ (0.0001,0) [0|6.5535] "MPa"  ECU,DDU
+ SG_ RegulatedPresL1 : 0|16@1+ (0.0001,0) [0|6.5535] "MPa"  ECU,DDU
+
+BO_ 850 HSCU_SystemInfoExtd_02: 8 HSCU
+ SG_ HSCU_H2CnsReq : 0|16@1+ (0.01,0) [0|655.35] "g"  ECU
+
+BO_ 849 HSCU_SystemInfoExtd: 8 HSCU
+ SG_ HSCU_SOVlvState : 52|2@1+ (1,0) [0|3] ""  ECU,DDU
+ SG_ TankVlvStatExtd : 32|16@1+ (1,0) [0|65535] ""  ECU,DDU
+ SG_ HSCU_SysStateExtd : 0|16@1- (1,0) [0|65535] ""  ECU,DDU
+ SG_ H2TankMass_HiRes : 16|16@1+ (0.01,0) [0|127.5] "kg"  ECU,DDU
+ SG_ HSCU_SystemInfo_AlvRllgCntr : 48|4@1+ (1,0) [0|15] ""  DDU
+ SG_ HSCU_SystemInfo_CRC : 56|8@1+ (1,0) [0|255] ""  DDU
+
+BO_ 598 FuelCellCmd1: 8 ECU
+ SG_ VCU_TankModReq_HSCU : 46|1@1+ (1,0) [0|1] ""  HSCU
+ SG_ FuelCellCmd1Cntr : 16|8@1+ (1,0) [0|0] ""  HSCU
+ SG_ FuelCellCmd1Chksm : 0|16@1+ (1,0) [0|0] ""  HSCU
+
+BO_ 614 FuelCellStat1: 8 ECU
+ SG_ FuelCellStat1Cntr : 16|8@1+ (1,0) [0|0] ""  HSCU
+ SG_ FuelCellStat1Chksm : 0|16@1+ (1,0) [0|0] ""  HSCU
+ SG_ TankVlvReq : 28|2@1+ (1,0) [0|0] ""  HSCU
+
+BO_ 912 HSCU_H2Meas_01: 8 HSCU
+ SG_ Hydrogen_Detector_HS04 : 24|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  ECU,DDU
+ SG_ Hydrogen_Detector_HS03 : 16|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  ECU,DDU
+ SG_ Hydrogen_Detector_HS02 : 8|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  ECU,DDU
+ SG_ Hydrogen_Detector_HS01 : 0|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  ECU,DDU
+
+BO_ 897 HSCU_TMeas_02: 8 HSCU
+ SG_ TankTempTS51 : 44|11@1- (0.1,50) [-52.4|152.3] "degC"  DDU
+ SG_ TankTempTS41 : 33|11@1- (0.1,50) [-52.4|152.3] "degC"  DDU
+ SG_ TankTempTS31 : 22|11@1- (0.1,50) [-52.4|152.3] "degC"  ECU,DDU
+ SG_ TankTempTS21 : 11|11@1- (0.1,50) [-52.4|152.3] "degC"  ECU,DDU
+ SG_ TankTempTS11 : 0|11@1- (0.1,50) [-52.4|152.3] "degC"  ECU,DDU
+
+BO_ 896 HSCU_TMeas_01: 8 HSCU
+ SG_ AvgTankTemp : 0|11@1- (0.1,50) [-52.4|152.3] "degC"  ECU,DDU
+
+BO_ 880 HSCU_PMeas_01: 8 HSCU
+ SG_ ManifoldPresH2 : 32|16@1+ (0.002,0) [0|131.07] "MPa"  ECU,DDU
+ SG_ ManifoldPresH1 : 16|16@1+ (0.002,0) [0|131.07] "MPa"  ECU,DDU
+ SG_ RegulatedPresM1 : 0|16@1+ (0.001,0) [0|65.535] "MPa"  ECU,DDU
+
+BO_ 865 HSCU_Warnings_Errors_02: 8 HSCU
+ SG_ HSCU_ErrTank : 14|10@1+ (1,0) [0|1023] ""  ECU,DDU
+ SG_ HSCU_ErrTankVlv : 4|10@1+ (1,0) [0|1023] ""  ECU,DDU
+ SG_ HSCU_Error : 2|2@1+ (1,0) [0|3] ""  ECU,DDU
+ SG_ HSCU_FuelingErr : 0|2@1+ (1,0) [0|3] ""  ECU,DDU
+ SG_ HSCU_WarnErr02_CRC : 56|8@1+ (1,0) [0|255] ""  DDU
+ SG_ HSCU_WarnErr02_AlvRllgCntr : 48|4@1+ (1,0) [0|15] ""  DDU
+
+BO_ 864 HSCU_Warnings_Errors_01: 8 HSCU
+ SG_ HSCU_CANErr : 22|5@1+ (1,0) [0|31] ""  ECU,DDU
+ SG_ FuelTemperature : 16|6@1+ (1,0) [0|63] ""  ECU,DDU
+ SG_ FuelPresHPRDs : 10|6@1+ (1,0) [0|63] ""  ECU,DDU
+ SG_ FuelPresHPRUs : 4|6@1+ (1,0) [0|63] ""  ECU,DDU
+ SG_ H2Concentration : 0|4@1+ (1,0) [0|15] ""  ECU,DDU
+ SG_ HSCU_WarnErr01_CRC : 56|8@1+ (1,0) [0|255] ""  DDU
+ SG_ HSCU_WarnErr01_AlvRllgCntr : 48|4@1+ (1,0) [0|15] ""  DDU
+
+BO_ 848 HSCU_SystemInfo: 8 HSCU
+ SG_ LowFuelWarning : 29|2@1+ (1,0) [0|3] ""  ECU
+ SG_ HSCU_SystemInfo_AlvRllgCntr : 48|4@1+ (1,0) [0|15] ""  ECU
+ SG_ HSCU_SystemInfo_CRC : 56|8@1+ (1,0) [0|255] ""  ECU
+ SG_ MaxH2Conc : 21|8@1+ (0.05,-0.5) [-0.5|12.25] "%"  ECU
+ SG_ TankVlvStat : 20|1@1+ (1,0) [0|1] ""  ECU,DDU
+ SG_ H2TankMass : 12|8@1+ (0.05,0) [0|12.75] "kg"  ECU,DDU
+ SG_ H2FuelRemaining : 5|7@1+ (1,0) [0|127] "%"  ECU,DDU
+ SG_ HSCU_SysState : 0|5@1+ (1,0) [0|31] ""  ECU,DDU
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 TankPresH1 "Tank Pressure";
+CM_ BO_ 913 "H2 Concentrations in detail";
+CM_ SG_ 913 Hydrogen_Detector_HS06 "H2 Concentration of Sensor HS02
+HS02 = Sensor *reserve*";
+CM_ SG_ 913 Hydrogen_Detector_HS05 "H2 Concentration of Sensor HS05
+HS05 = Sensor above HSS on Driver cabin Side";
+CM_ BO_ 881 "Collector of overall Pressures in HS-System";
+CM_ SG_ 881 RegulatedPresL2 "Pressure in integrated pressure regulator Block LPR2(1,5MPa_g)";
+CM_ SG_ 881 RegulatedPresL1 "Pressure in integrated pressure regulator Block LPR1(1,5MPa_g)";
+CM_ BO_ 850 "general HSCU information like Status, Temp, Pres, ... ";
+CM_ SG_ 850 HSCU_H2CnsReq "H2 mass to be consumed for parking preparation";
+CM_ BO_ 849 "general HSCU information like Status, Temp, Pres, ... ";
+CM_ SG_ 849 H2TankMass_HiRes "remaining Tankmass in kg (high resolution)";
+CM_ SG_ 849 HSCU_SystemInfo_AlvRllgCntr "alive rolling counter signal for HSCU data send frame of message HSCU_SystemInfo
+E2E Implementation according AUTOSAR Profile 2";
+CM_ SG_ 849 HSCU_SystemInfo_CRC "checksum signal for cyclic redundancy check for HSCU data send frame of message HSCU_Systeminfo
+E2E Implementation according AUTOSAR Profile 2";
+CM_ SG_ 598 VCU_TankModReq_HSCU "This signal shall consider also the information if the Fuel Filler Door is opened or not (combined info from VCU).";
+CM_ BO_ 912 "H2 Concentrations in detail";
+CM_ SG_ 912 Hydrogen_Detector_HS04 "H2 Concentration of Sensor HS04
+HS04 = Sensor at Engine Compartment";
+CM_ SG_ 912 Hydrogen_Detector_HS03 "H2 Concentration of Sensor HS03
+HS03 = Sensor Rear";
+CM_ SG_ 912 Hydrogen_Detector_HS02 "H2 Concentration of Sensor HS02
+HS02 = Sensor driver Side";
+CM_ SG_ 912 Hydrogen_Detector_HS01 "H2 Concentration of Sensor HS01
+HS01 = Sensor passanger Side";
+CM_ BO_ 897 "defined Tanktemperatures of HS-System";
+CM_ SG_ 897 TankTempTS51 "Tank Temperature Front of Tank 5, TS51 OTV Side";
+CM_ SG_ 897 TankTempTS41 "Tank Temperature Front of Tank 4, TS41 OTV Side";
+CM_ SG_ 897 TankTempTS31 "Tank Temperature Front of Tank 3, TS31 OTV Side";
+CM_ SG_ 897 TankTempTS21 "Tank Temperature Front of Tank 2, TS21 OTV Side";
+CM_ SG_ 897 TankTempTS11 "Tank Temperature Front of Tank 1, TS11 OTV Side";
+CM_ BO_ 896 "Collector of overall Temperatures in HS-System";
+CM_ SG_ 896 AvgTankTemp "Average Tank Temperature Front (TS11, TS21,TS 31, TS41, TS51) OTV Side";
+CM_ BO_ 880 "Collector of overall Pressures in HS-System";
+CM_ SG_ 880 ManifoldPresH2 "regulated Pressure of Hydrogen after Pressure Reducer PTM1";
+CM_ SG_ 880 ManifoldPresH1 "Pressure in Manifold before Pressure Reducer PTH7";
+CM_ SG_ 880 RegulatedPresM1 "Average Tank Pressure of all Tanks in MPa";
+CM_ BO_ 865 "Collector for HSCU Errors and Warnings";
+CM_ SG_ 865 HSCU_ErrTank "Error in Tank";
+CM_ SG_ 865 HSCU_ErrTankVlv "Error in TankVlv";
+CM_ SG_ 865 HSCU_Error "Error in HSCU occured";
+CM_ SG_ 865 HSCU_FuelingErr "Error in Fueling";
+CM_ SG_ 865 HSCU_WarnErr02_CRC "checksum signal for cyclic redundancy check for HSCU data send frame of message HSCU_Warnings_Errors_02
+E2E Implementation according AUTOSAR Profile 2";
+CM_ SG_ 865 HSCU_WarnErr02_AlvRllgCntr "alive rolling counter signal for HSCU data send frame of message HSCU_Warnings_Errors_02
+E2E Implementation according AUTOSAR Profile 2";
+CM_ BO_ 864 "Collector for HSCU Errors and Warnings";
+CM_ SG_ 864 HSCU_CANErr "Errors to any other CAN Component which is nescessary for HSCU Application";
+CM_ SG_ 864 FuelTemperature "Warning and Error of low fuel temperature in Tanks";
+CM_ SG_ 864 FuelPresHPRDs "Warning and Error of low fuel pressure on FC-System side
+PTM1";
+CM_ SG_ 864 FuelPresHPRUs "Warning and Error of low fuel Pressure in System";
+CM_ SG_ 864 H2Concentration "Errors and Warnings of H2 Concentration Sensors";
+CM_ SG_ 864 HSCU_WarnErr01_CRC "checksum signal for cyclic redundancy check for HSCU data send frame of message HSCU_Warnings_Errors_01
+E2E Implementation according AUTOSAR Profile 2";
+CM_ SG_ 864 HSCU_WarnErr01_AlvRllgCntr "alive rolling counter signal for HSCU data send frame of message HSCU_Warnings_Errors_01
+E2E Implementation according AUTOSAR Profile 2";
+CM_ BO_ 848 "general HSCU information like Status, Temp, Pres, ... ";
+CM_ SG_ 848 LowFuelWarning "Low Fuel Warning. SOC below 20%. Refueling might be necessary.";
+CM_ SG_ 848 HSCU_SystemInfo_AlvRllgCntr "alive rolling counter signal for HSCU data send frame of message HSCU_SystemInfo
+E2E Implementation according AUTOSAR Profile 2";
+CM_ SG_ 848 HSCU_SystemInfo_CRC "checksum signal for cyclic redundancy check for HSCU data send frame of message HSCU_Systeminfo
+E2E Implementation according AUTOSAR Profile 2";
+CM_ SG_ 848 MaxH2Conc "max H2 Concentration monitored by any of the systems H2 Concentration sensors";
+CM_ SG_ 848 TankVlvStat "Status of TankValves";
+CM_ SG_ 848 H2TankMass "remaining Tankmass in kg";
+CM_ SG_ 848 H2FuelRemaining "Remaining Fuel Level remaining in Tanks in %";
+CM_ SG_ 848 HSCU_SysState "Definition of HSCU System State";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" INT -2147483648 2147483647;
+BA_DEF_ BO_  "GenMsgTimeoutTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Event","Mixed","IfActive","not_used","not_used","not_used","not_used","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "Bus Speed" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgTimeoutTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "Bus Speed" "";
+BA_ "BusType" "CAN";
+BA_ "Bus Speed" "500k";
+BA_ "DBName" "H2E_KIT_CAN1";
+BA_ "GenMsgSendType" BO_ 646 0;
+BA_ "GenMsgSendType" BO_ 630 0;
+BA_ "GenMsgCycleTime" BO_ 913 100;
+BA_ "GenMsgCycleTime" BO_ 881 100;
+BA_ "GenMsgSendType" BO_ 881 0;
+BA_ "GenMsgCycleTime" BO_ 850 10;
+BA_ "GenMsgSendType" BO_ 850 0;
+BA_ "GenMsgCycleTime" BO_ 849 10;
+BA_ "GenMsgSendType" BO_ 849 0;
+BA_ "GenMsgCycleTime" BO_ 598 10;
+BA_ "GenMsgSendType" BO_ 598 0;
+BA_ "GenMsgCycleTime" BO_ 614 20;
+BA_ "GenMsgSendType" BO_ 614 0;
+BA_ "GenMsgCycleTime" BO_ 912 100;
+BA_ "GenMsgCycleTime" BO_ 897 100;
+BA_ "GenMsgSendType" BO_ 897 0;
+BA_ "GenMsgCycleTime" BO_ 896 100;
+BA_ "GenMsgSendType" BO_ 896 0;
+BA_ "GenMsgCycleTime" BO_ 880 100;
+BA_ "GenMsgSendType" BO_ 880 0;
+BA_ "GenMsgCycleTime" BO_ 865 100;
+BA_ "GenMsgSendType" BO_ 865 0;
+BA_ "GenMsgCycleTime" BO_ 864 100;
+BA_ "GenMsgSendType" BO_ 864 0;
+BA_ "GenMsgCycleTime" BO_ 848 100;
+BA_ "GenMsgSendType" BO_ 848 0;
+BA_ "GenSigStartValue" SG_ 646 H2RailTemperature15_2 64;
+BA_ "GenSigStartValue" SG_ 646 H2RailTemperature15_1 64;
+BA_ "GenSigStartValue" SG_ 646 H2RailTemperature150_2 64;
+BA_ "GenSigStartValue" SG_ 646 H2RailTemperature150_1 64;
+BA_ "GenSigStartValue" SG_ 913 Hydrogen_Detector_HS06 10;
+BA_ "GenSigStartValue" SG_ 913 Hydrogen_Detector_HS05 10;
+BA_ "GenSigStartValue" SG_ 912 Hydrogen_Detector_HS04 10;
+BA_ "GenSigStartValue" SG_ 912 Hydrogen_Detector_HS03 10;
+BA_ "GenSigStartValue" SG_ 912 Hydrogen_Detector_HS02 10;
+BA_ "GenSigStartValue" SG_ 912 Hydrogen_Detector_HS01 10;
+BA_ "GenSigStartValue" SG_ 897 TankTempTS51 -500;
+BA_ "GenSigStartValue" SG_ 897 TankTempTS41 -500;
+BA_ "GenSigStartValue" SG_ 897 TankTempTS31 -500;
+BA_ "GenSigStartValue" SG_ 897 TankTempTS21 -500;
+BA_ "GenSigStartValue" SG_ 897 TankTempTS11 -500;
+BA_ "GenSigStartValue" SG_ 896 AvgTankTemp -500;
+BA_ "GenSigStartValue" SG_ 848 MaxH2Conc 10;
+VAL_ 630 SIV150Vlv1_State 1 "SIVValve_Closed" 0 "SIVValve_Open" ;
+VAL_ 630 SIV15Vlv2_State 1 "SIVValve_Closed" 0 "SIVValve_Open" ;
+VAL_ 630 SIV15Vlv1_State 1 "SIVValve_Closed" 0 "SIVValve_Open" ;
+VAL_ 598 VCU_TankModReq_HSCU 1 "Fueling required" 0 "no Fueling required" ;
+VAL_ 614 TankVlvReq 3 "Invalid" 2 "Err" 1 "OpenValves" 0 "CloseValves" ;
+VAL_ 865 HSCU_ErrTank 512 "Tank9 Error" 256 "Tank8 Error" 128 "Tank7 Error" 64 "Tank6 Error" 32 "Tank5 Error" 16 "Tank4 Error" 0 "reserved" 8 "Tank3 Error" 4 "Tank2 Error" 2 "Tank1 Error" 1 "no error" ;
+VAL_ 865 HSCU_ErrTankVlv 512 "TankVlv9 Error" 256 "TankVlv8 Error" 128 "TankVlv7 Error" 64 "TankVlv6 Error" 32 "TankVlv5 Error" 16 "TankVlv4 Error" 0 "reserved" 8 "TankVlv3 Error" 4 "TankVlv2 Error" 2 "TankVlv1 Error" 1 "no error" ;
+VAL_ 865 HSCU_Error 0 "reserved" 2 "error" 1 "no error" ;
+VAL_ 865 HSCU_FuelingErr 0 "reserved" 2 "error" 1 "no error" ;
+VAL_ 864 HSCU_CANErr 16 "H2 Sensor CAN Error" 0 "reserved" 8 "RDI CAN Error" 4 "FCCU CAN Error" 2 "VCU CAN Error" 1 "no error" ;
+VAL_ 864 FuelTemperature 32 "Sensor Defect" 16 "Alarm High" 0 "reserved" 8 "Warning High" 4 "Alarm Low (< -55 degC)" 2 "Warning Low (< -50 degC)" 1 "no error" ;
+VAL_ 864 FuelPresHPRDs 32 "Sensor Defect" 16 "Alarm High" 0 "reserved" 8 "Warning High" 4 "Alarm Low " 2 "Warning Low " 1 "no error" ;
+VAL_ 864 FuelPresHPRUs 32 "Sensor Defect" 16 "Alarm High" 0 "reserved" 8 "Warning High " 4 "Alarm Low " 2 "Warning Low " 1 "no error" ;
+VAL_ 864 H2Concentration 0 "reserved" 8 "Sensor Defect" 4 "Alarm (> 3%)" 2 "Warning (> 2%)" 1 "no error" ;
+VAL_ 848 LowFuelWarning 0 "no Warning" 1 "Warning, SOC below 20%" ;
+VAL_ 848 TankVlvStat 0 "TankValves closed" 1 "TankValves open" ;
+VAL_ 848 HSCU_SysState 0 "reserved" 10 "Finish" 8 "Error" 4 "Fueling" 2 "Running" 1 "Init" ;
+
